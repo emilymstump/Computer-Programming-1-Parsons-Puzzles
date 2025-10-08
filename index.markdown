@@ -38,13 +38,14 @@ Re-arrange the blocks below so they make the smoothie program
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "example-sortable",
     "max_wrong_lines": 10,
-    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "grader": ParsonsWidget._graders.UnitTestGrader,
     "exec_limit": 2500,
     "can_indent": true,
     "x_indent": 50,
     "lang": "en",
     "show_feedback": true,
-    "trashId": "example-sortableTrash"
+    "trashId": "example-sortableTrash",
+    "unittests": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def test_0(self):\n    self.assertEqual(,,)\n_test_result = myTests().main()"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
@@ -58,7 +59,6 @@ Re-arrange the blocks below so they make the smoothie program
   }); 
 })(); 
 </script>
-
 
 ## Parsons 2 (Variable Check Grader)
 Construct a program that swaps the values of variables <code>x</code> and <code>y</code> using the helper variable <code>tmp</code>. You can change the names of the variables (<span class="jsparson-toggle"></span>) by clicking them.
