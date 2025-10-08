@@ -3,11 +3,11 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: Multiple Parson's Problems on One Page
+title: Practice with While and For Loops
 ---
 # Parsons Practice
 
-## Parsons 1 (Line Based Grader)
+## Smoothie Maker
 Re-arrange the blocks below so they make the smoothie program
 
 <div id="example-sortableTrash" class="sortable-code"></div> 
