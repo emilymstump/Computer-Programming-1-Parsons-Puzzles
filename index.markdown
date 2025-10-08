@@ -10,40 +10,49 @@ title: Multiple Parson's Problems on One Page
 ## Parsons 1 (Line Based Grader)
 Re-arrange the blocks below so they print out "Hello World!"
 
-<div id="p1-sortableTrash" class="sortable-code"></div>
-<div id="p1-sortable" class="sortable-code"></div>
-<div style="clear:both;"></div>
-<p>
-    <input id="p1-feedbackLink" value="Get Feedback" type="button" />
-    <input id="p1-newInstanceLink" value="Reset Problem" type="button" />
-</p>
-<script type="text/javascript">
-(function() {
-  var initial = "print(\"Hello\")\n" +
-    "print(\" \")\n" +
-    "print(\"World\")\n" +
-    "print(\"!\")";
+<div id="example-sortableTrash" class="sortable-code"></div> 
+<div id="example-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="example-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="example-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "print(“You’re making a smoothie”)\n" +
+    "ingredients_added = 0\n" +
+    "ingredient_list = “”\n" +
+    "while ingredients_added &lt; 5:\n" +
+    "	ingredient = input(“Add an ingredient to your smoothie (or type &#039;done’): ”)\n" +
+    "	if ingredient == “done”:\n" +
+    "		print(“Finishing your smoothie early!”)\n" +
+    "		break\n" +
+    "	print(“Added ” + ingredient + “ to the blender.”)\n" +
+    "	ingredient_list = ingredient_list + ingredient + “ ”\n" +
+    "	ingredients_added += 1\n" +
+    "print(“Your ” + ingredient_list + “smoothie is ready!”)\n" +
+    "print(“Total number of ingredients: ” + str(ingredients_added))";
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "p1-sortable",
+    "sortableId": "example-sortable",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
-    "can_indent": false,
+    "can_indent": true,
     "x_indent": 50,
     "lang": "en",
-    "trashId": "p1-sortableTrash"
+    "show_feedback": true
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#p1-newInstanceLink").click(function(event){
-      event.preventDefault();
-      parsonsPuzzle.shuffleLines();
-  });
-  $("#p1-feedbackLink").click(function(event){
-      event.preventDefault();
-      parsonsPuzzle.getFeedback();
-  });
-})();
+  $("#example-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#example-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
 </script>
 
 
