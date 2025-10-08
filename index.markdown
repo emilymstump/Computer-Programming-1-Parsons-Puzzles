@@ -47,3 +47,47 @@ Write a program that prints even numbers 2 through 20 using a while loop.
 </script>
 
 
+## Divisibility
+We want to ask a user for two numbers and then divide them. The issue is that we cannot divide a number by 0. You’ll need to have a while loop that forces a user to continue entering a denominator value until their input is not zero. If the user enters a 0, tell them they cannot enter zero and have them enter another number. Once they have a nonzero denominator, then check whether the numerator is divisible by the denominator.
+
+<div id="divide-sortableTrash" class="sortable-code"></div> 
+<div id="divide-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="divide-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="divide-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "numerator = int(input(&quot;Enter a numerator: &quot;))\n" +
+    "denominator = int(input(&quot;Enter denominator: &quot;))\n" +
+    "while denominator == 0:\n" +
+    "    print(&quot;Your denominator can&#039;t be zero!&quot;)\n" +
+    "    denominator = int(input(&quot;Enter a nonzero denominator: &quot;))\n" +
+    "if int(numerator / denominator) * denominator == numerator:\n" +
+    "    print(&quot;Divides evenly!&quot;)\n" +
+    "else:\n" +
+    "    print(&quot;Doesn&#039;t divide evenly.&quot;)";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "divide-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true,
+    "trashId": "divide-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#divide-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#divide-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
