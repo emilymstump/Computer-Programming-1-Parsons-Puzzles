@@ -21,10 +21,7 @@ Write a program that prints even numbers 2 through 20 using a while loop.
   var initial = "number = 2\n" +
     "while number &lt;= 20:\n" +
     "    print(number)\n" +
-    "    number += 2\n" +
-    "while number &lt;=20#distractor\n" +
-    "while number &lt; 20:#distractor\n" +
-    "number = number + 1#distractor";
+    "    number += 2";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "evens-sortable",
     "max_wrong_lines": 10,
@@ -44,10 +41,6 @@ Write a program that prints even numbers 2 through 20 using a while loop.
   }); 
   $("#evens-feedbackLink").click(function(event){ 
       event.preventDefault(); 
-      parsonsPuzzle.getFeedback(); 
-  }); 
-})(); 
-</script>
       parsonsPuzzle.getFeedback(); 
   }); 
 })(); 
