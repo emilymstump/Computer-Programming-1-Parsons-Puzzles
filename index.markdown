@@ -183,12 +183,6 @@ Ask the user to input as many numbers as they would like (one at a time). Each t
   }); 
 })(); 
 </script>
-  $("#highlow-feedbackLink").click(function(event){ 
-      event.preventDefault(); 
-      parsonsPuzzle.getFeedback(); 
-  }); 
-})(); 
-</script>
 
 ## Countdown Timer
 Ask the user for a starting number, then count down to zero, printing each number along the way. At the end, print "Blast off!"
