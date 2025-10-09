@@ -106,7 +106,7 @@ Write a program that makes the user guess a particular number between 1 and 100.
 (function(){
   var initial = "magic_number = 3\n" +
     "while True:\n" +
-    "    guess = int(input(&quot;Guess a number between 1 and 100: &quot;))\n" +
+    "    guess = int(input(&quot;Enter a guess: &quot;))\n" +
     "    if guess == magic_number:\n" +
     "        print(&quot;Correct!&quot;)\n" +
     "        break\n" +
@@ -131,6 +131,12 @@ Write a program that makes the user guess a particular number between 1 and 100.
       event.preventDefault(); 
       parsonsPuzzle.shuffleLines(); 
   }); 
+  $("#highlow-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
 
 ## Calculating Averages
 Ask the user to input as many numbers as they would like (one at a time). Each time they put in a number, ask them whether they would like to put in another number or whether they are done. When the user indicates that they are done, then print out the average of all the numbers they inputted.
