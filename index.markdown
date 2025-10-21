@@ -90,6 +90,51 @@ Some people have just a first name and a last name. Some people also have a midd
 })(); 
 </script>
 
+
+## Categories
+Write a program that asks the user for three categories. For each category, ask the user for three things in that category. You should print something for each category that states the category and the three things in that category.
+
+<div id="categories-sortableTrash" class="sortable-code"></div> 
+<div id="categories-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="categories-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="categories-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "for i in range(3):\n" +
+    "    category = input(&quot;Enter a category: &quot;)\n" +
+    "    things = &quot;&quot;\n" +
+    "    for j in range(3):\n" +
+    "        new_thing = input(&quot;Enter something in the category &quot; + category + &quot;: &quot;)\n" +
+    "        things = things + &quot; &quot; + new_thing\n" +
+    "    print(category + &quot;: &quot; + things)";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "categories-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true,
+    "trashId": "categories-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#categories-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#categories-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+
 ## Average of Numbers
 Write a program that averages together all numbers that a user inputs. First, ask the user how many numbers they want to average. Then use a for loop to ask the user for each number one by one. Finally, print the average of all the numbers.
 
@@ -127,49 +172,6 @@ Write a program that averages together all numbers that a user inputs. First, as
       parsonsPuzzle.shuffleLines(); 
   }); 
   $("#numbers-feedbackLink").click(function(event){ 
-      event.preventDefault(); 
-      parsonsPuzzle.getFeedback(); 
-  }); 
-})(); 
-</script>
-
-
-## Categories
-Write a program that asks the user for three categories. For each category, ask the user for three things in that category. You should print something for each category that states the category and the three things in that category.
-
-<div id="categories-sortableTrash" class="sortable-code"></div> 
-<div id="categories-sortable" class="sortable-code"></div> 
-<div style="clear:both;"></div> 
-<p> 
-    <input id="categories-feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="categories-newInstanceLink" value="Reset Problem" type="button" /> 
-</p> 
-<script type="text/javascript"> 
-(function(){
-  var initial = "for i in range(3):\n" +
-    "    category = input(&quot;Enter a category: &quot;)\n" +
-    "    things = &quot;&quot;\n" +
-    "    for j in range(3):\n" +
-    "        new_thing = input(&quot;Enter something in the category &quot; + category + &quot;: &quot;)\n" +
-    "        things = things + &quot; &quot; + new_thing\n" +
-    "    print(category + &quot;: &quot; + things)";
-  var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "categories-sortable",
-    "max_wrong_lines": 10,
-    "grader": ParsonsWidget._graders.LineBasedGrader,
-    "exec_limit": 2500,
-    "can_indent": true,
-    "x_indent": 50,
-    "lang": "en",
-    "show_feedback": true
-  });
-  parsonsPuzzle.init(initial);
-  parsonsPuzzle.shuffleLines();
-  $("#categories-newInstanceLink").click(function(event){ 
-      event.preventDefault(); 
-      parsonsPuzzle.shuffleLines(); 
-  }); 
-  $("#categories-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
@@ -219,7 +221,8 @@ Example output if the user picks 5:
     "can_indent": true,
     "x_indent": 50,
     "lang": "en",
-    "show_feedback": true
+    "show_feedback": true,
+    "trashId": "mult-sortableTrash"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
@@ -233,5 +236,3 @@ Example output if the user picks 5:
   }); 
 })(); 
 </script>
-
-
