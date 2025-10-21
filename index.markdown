@@ -183,12 +183,18 @@ Write a program that averages together all numbers that a user inputs. First, as
 Write a program that creates a multiplication table. A multiplication table is a table in which each entry is equal to the product of the corresponding row and column number. Have the numbers start at 1. Ask the user to input what number they want the table to go up to.
 
 Example output if the user picks 5:
-a    1  2  3  4  5
-b 1  1  2  3  4  5
-c 2  2  4  6  8 10
-d 3  3  6  9 12 15
-e 4  4  8 12 16 20
-f 5  5 10 15 20 25
+
+    1  2  3  4  5
+    
+ 1  1  2  3  4  5
+ 
+ 2  2  4  6  8 10
+ 
+ 3  3  6  9 12 15
+ 
+ 4  4  8 12 16 20
+ 
+ 5  5 10 15 20 25
 
 <div id="mult-sortableTrash" class="sortable-code"></div> 
 <div id="mult-sortable" class="sortable-code"></div> 
