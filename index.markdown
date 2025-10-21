@@ -184,17 +184,17 @@ Write a program that creates a multiplication table. A multiplication table is a
 
 Example output if the user picks 5:
 
-&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;2&nbsp;&nbsp;3&nbsp;&nbsp;4&nbsp;&nbsp;5
+&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;2&nbsp;&nbsp;3&nbsp;&nbsp;4&nbsp;&nbsp;5
     
 1&nbsp;&nbsp;1&nbsp;&nbsp;2&nbsp;&nbsp;3&nbsp;&nbsp;4&nbsp;&nbsp;5
  
-2  2  4  6  8 10
+2&nbsp;&nbsp;2&nbsp;&nbsp;4&nbsp;&nbsp;6&nbsp;&nbsp;8&nbsp;10
  
-3  3  6  9 12 15
+3&nbsp;&nbsp;3&nbsp;&nbsp;6&nbsp;&nbsp;9&nbsp;12&nbsp;15
  
-4  4  8 12 16 20
+4&nbsp;&nbsp;4&nbsp;&nbsp;8&nbsp;12&nbsp;16&nbsp;20
  
-5  5 10 15 20 25
+5&nbsp;&nbsp;5&nbsp;10&nbsp;15&nbsp;20&nbsp;25
 
 <div id="mult-sortableTrash" class="sortable-code"></div> 
 <div id="mult-sortable" class="sortable-code"></div> 
